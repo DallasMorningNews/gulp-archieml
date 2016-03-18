@@ -14,7 +14,7 @@ See the [ArchieML spec](http://archieml.org/spec/1.0/CR-20150306.html) and [Arch
 ## Install
 
 ```
-$ npm install --save-dev https://github.com/DallasMorningNews/gulp-archieml/tarball/master
+$ npm install --save-dev gulp-archieml
 ```
 
 
