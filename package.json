@@ -22,7 +22,8 @@
   ],
   "dependencies": {
     "archieml": "^0.4.2",
-    "gulp-util": "^3.0.1",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^1.0.0",
     "through2": "^0.6.3"
   },
   "devDependencies": {

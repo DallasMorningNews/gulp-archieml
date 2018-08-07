@@ -1,8 +1,10 @@
 'use strict';
 
-var gutil = require('gulp-util'),
-	through = require('through2'),
-	archieml = require('archieml');
+var archieml = require('archieml'),
+		PluginError = require('plugin-error'),
+		replaceExt = require('replace-ext'),
+		through = require('through2');
+
 
 module.exports = function () {
 	return through.obj(function(file, enc, cb) {
@@ -12,17 +14,17 @@ module.exports = function () {
 		}
 
 		if (file.isStream()) {
-			cb(new gutil.PluginError('gulp-archieml', 'Streaming not supported'));
+			cb(new PluginError('gulp-archieml', 'Streaming not supported'));
 			return;
 		}
 
 		try {
 			var parsed = archieml.load(file.contents.toString());
 			file.contents = new Buffer(JSON.stringify(parsed));
-			file.path = gutil.replaceExtension(file.path, '.json');
+			file.path = replaceExt(file.path, '.json');
 			this.push(file);
 		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-archieml', err));
+			this.emit('error', new PluginError('gulp-archieml', err));
 		}
 
 		cb();

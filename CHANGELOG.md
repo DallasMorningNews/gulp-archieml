@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/) from v0.5.
 
 ### Fixed
 - Switched to CircleCI 2.0 test config, due to pending 1.0 deprecation
+- Drops deprecated `gulp-util` module
 
 ## [1.0.0] - 2016-03-18
 
