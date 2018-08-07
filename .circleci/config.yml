@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/gulp-archieml
+    docker:
+      - image: circleci/node:8.6
+    steps:
+      - checkout
+      - run: mkdir ~/junit
+      - run: sudo npm install -g istanbul mocha
+      - restore_cache:
+          key: node-deps-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: node-deps-{{ checksum "package.json" }}
+          paths:
+            - "node_modules"
+      - run: MOCHA_FILE=~/junit/test-results.xml istanbul cover _mocha test -- --reporter mocha-junit-reporter
+      - run: istanbul report html
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: ~/junit
+      - store_artifacts:
+          path: coverage
