@@ -12,7 +12,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "jshint index.js && istanbul cover _mocha test"
+    "test": "jshint index.js && istanbul cover _mocha test && istanbul report html"
   },
   "files": [
     "index.js"
