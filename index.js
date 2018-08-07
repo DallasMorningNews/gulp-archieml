@@ -23,7 +23,8 @@ module.exports = () => through.obj(function archieToJson(file, enc, cb) {
     });
     this.push(jsonFile);
   } catch (err) {
-    this.emit('error', new PluginError('gulp-archieml', err));
+    cb(new PluginError('gulp-archieml', err));
+    return;
   }
 
   cb();
