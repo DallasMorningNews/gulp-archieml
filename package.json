@@ -12,7 +12,8 @@
     "node": ">=6.4.0"
   },
   "scripts": {
-    "test": "eslint index.js && istanbul cover _mocha test && istanbul report html"
+    "lint": "eslint index.js",
+    "test": "istanbul cover _mocha test && istanbul report html"
   },
   "files": [
     "index.js"
