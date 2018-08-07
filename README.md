@@ -21,14 +21,12 @@ $ npm install --save-dev gulp-archieml
 ## Usage
 
 ```js
-var gulp = require('gulp'),
-    archieml = require('gulp-archieml');
+const gulp = require('gulp');
+const archieml = require('gulp-archieml');
 
-gulp.task('test', function() {
-	return gulp.src('./path/to/*.aml')
-		.pipe(archieml())
-		.pipe(gulp.dest('./path/to/json/output/'));
-});
+gulp.task('test', () => gulp.src('./path/to/*.aml')
+  .pipe(archieml())
+  .pipe(gulp.dest('./path/to/json/output/')));
 ```
 
 ## Tests
@@ -37,6 +35,12 @@ Tests (written in [Mocha](https://mochajs.org/)) can be run using:
 
 ```
 $ npm test
+```
+
+Coverage is calculated using Istanbul and output to the _coverage_ folder:
+
+```
+$ open coverage/index.html
 ```
 
 

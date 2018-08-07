@@ -1,12 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/) from v0.5.0 forward.
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 ### Changed
 - Bumped `archieml` to the latest version, 0.4.2
+- ES2015 syntax, which means Node 6.4.x is now required
 
 ### Fixed
 - Switched to CircleCI 2.0 test config, due to pending 1.0 deprecation
