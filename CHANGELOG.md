@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) from v0.5.0 forward.
 
 ## Unreleased
+### Changed
+- Bumped `archieml` to the latest version, 0.4.2
+
 ### Fixed
 - Switched to CircleCI 2.0 test config, due to pending 1.0 deprecation
 
