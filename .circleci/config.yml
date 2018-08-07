@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: mkdir ~/junit
-      - run: sudo npm install -g istanbul mocha
+      - run: sudo npm install -g istanbul mocha eslint
       - restore_cache:
           key: node-deps-{{ checksum "package.json" }}
       - run: npm install
@@ -15,6 +15,7 @@ jobs:
           key: node-deps-{{ checksum "package.json" }}
           paths:
             - "node_modules"
+      - run: eslint index.js
       - run: MOCHA_FILE=~/junit/test-results.xml istanbul cover _mocha test -- --reporter mocha-junit-reporter
       - run: istanbul report html
       - store_test_results:
