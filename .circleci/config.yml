@@ -16,14 +16,14 @@ jobs:
           paths:
             - "node_modules"
       - run:
-          name: Linting using ESlint ...
+          name: Linting using ESlint
           command: npm run lint
       - run:
-          name: Running tests with Mocha ...
+          name: Running tests with Mocha
           command: MOCHA_FILE=~/junit/test-results.xml istanbul cover _mocha test -- --reporter mocha-junit-reporter
           when: always
       - run:
-          name: Building HTML coverage report ...
+          name: Building HTML coverage report
           command: istanbul report html
       - store_test_results:
           path: ~/junit

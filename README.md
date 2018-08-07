@@ -1,6 +1,5 @@
 # gulp-archieml
-
-[![Circle CI](https://circleci.com/gh/DallasMorningNews/gulp-archieml.svg?style=svg)](https://circleci.com/gh/DallasMorningNews/gulp-archieml)
+![CircleCI](https://img.shields.io/circleci/project/github/DallasMorningNews/gulp-archieml.svg) [![npm](https://img.shields.io/npm/v/gulp-archieml.svg)](https://github.com/DallasMorningNews/gulp-archieml) [![GitHub license](https://img.shields.io/github/license/DallasMorningNews/gulp-archieml.svg)](https://github.com/DallasMorningNews/gulp-archieml/blob/master/LICENSE)
 
 A Gulp plugin for parsing Archie Markup Language (ArchieML) files into JSON using [archieml-js](https://github.com/newsdev/archieml-js).
 
